@@ -7,8 +7,11 @@ class Scanner:
     def scan(self):
         print("Scanning document...")
 
+
+# Multiple inheritance works in Python
 class PrintScanner(Printer, Scanner):
     pass
+
 
 class TaskManager:
     def print_task(self, task_id, printer):
@@ -23,11 +26,11 @@ class TaskManager:
 # Usage
 printer = Printer()
 scanner = Scanner()
-printScanner = PrintScanner()
+print_scanner = PrintScanner()
 
 scheduler = TaskManager()
 
 scheduler.print_task(101, printer)
 scheduler.scan_task(102, scanner)
-scheduler.print_task(103, printScanner)
-scheduler.scan_task(104, printScanner)
+scheduler.print_task(103, print_scanner)
+scheduler.scan_task(104, print_scanner)
